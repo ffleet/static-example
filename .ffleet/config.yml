@@ -6,6 +6,9 @@ functions:
     handler: index.static
 http:
   routes:
+    /:
+      get:
+        function: static
     /**:
       get:
         function: static

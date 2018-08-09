@@ -1,4 +1,6 @@
 const express = require('express');
 const shim = require('@ffleet/shim');
 
-exports.static = shim.http(express.static('./public'));
+const app = express();
+app.use(express.static('./public'));
+exports.static = shim.http(app);
