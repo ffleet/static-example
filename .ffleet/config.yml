@@ -1,0 +1,11 @@
+version: 1.0
+runtime: node8
+role: arn:aws:iam::962961885225:role/lambda
+functions:
+  static:
+    handler: index.static
+http:
+  routes:
+    /**:
+      get:
+        function: static
